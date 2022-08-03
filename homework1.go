@@ -10,26 +10,26 @@ import (
 func main() {
 	fmt.Print("1 : Merhaba Dünya Yaz\n2 : Rasgele 2 sayının karesini al\n3 : Rasgele 2 sayıyı Topla\n4 : Rasgele 2 sayıyı Çarp\n5 : Rasgele 2 sayıyı Böl")
 	fmt.Println("Yapmak istediğiniz işlem numarasını giriniz....")
-	var Choice int
-	fmt.Scanln(&Choice)
+	var choice int
+	fmt.Scanln(&choice)
 	rand.Seed(time.Now().UnixNano())
-	ChoiceAct(Choice)
+	choiceAct(choice)
 
 }
 
 //TODO
-//golang için isimlerin büyük harfle başlamasının özel bir anlamı vardır bu konu işlenecektir
-//go dilinde en ideal kullanım biçimi camelCase yöntemidir
-//bunu araştırıp tüm fonksiyon ve değişken isimlerini camelCase olarak yeniden yazalım
-//proje dosyası isimlerinin sonuna .go ifadesini koyalım
+//golang için isimlerin büyük harfle başlamasının özel bir anlamı vardır bu konu işlenecektir ++
+//go dilinde en ideal kullanım biçimi camelCase yöntemidir ++
+//bunu araştırıp tüm fonksiyon ve değişken isimlerini camelCase olarak yeniden yazalım ++
+//proje dosyası isimlerinin sonuna .go ifadesini koyalım ++
 //BAŞARILI bir çalışma
 
-func ChoiceAct(cha int) {
+func choiceAct(cha int) {
 	if cha < 1 || cha > 5 {
 		fmt.Println("Yanlış Giriş Yaptınız")
 	} else {
 		if cha == 1 {
-			Hw(true)
+			hw(true)
 		} else if cha == 2 {
 			fmt.Printf("Karesi : %d\n", sq(rand.Intn(100)))
 		} else if cha == 3 {
@@ -42,7 +42,7 @@ func ChoiceAct(cha int) {
 	}
 }
 
-func Hw(x bool) {
+func hw(x bool) {
 	xSwitch := rand.Intn(2)
 	if xSwitch == 0 {
 		x = !x
