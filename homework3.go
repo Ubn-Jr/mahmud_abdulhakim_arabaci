@@ -45,7 +45,7 @@ func main() {
 	Loops:
 		var chc2 int
 		fmt.Println("1 : Ögrencilerin Vize Final Hesaplaması yapıp kalan ve geçenleri listelemek için \n2 : Ögrencileri Ad Soyad Listelemek için\n3 : Girilen İndeksdeki Ögrencinin Durumunu Yazdır\n4 : Girilen İndeksdeki Harici Ögrencileri listele\n5 : Sonlandırmak için")
-		// TODO Ad'a soyad'a göre Arama, Ad,Soyad, Vize, Final ve Ort Notlara göre sıralama(A-Z, Z-A)
+		// TODO Ad'a soyad'a göre Arama, Ad,Soyad, Vize, Final ve Ort Notlara göre sıralama(A-Z, Z-A), push to multi dim array
 		fmt.Scanln(&chc2)
 		if chc2 == 5 {
 			goto FINISH
