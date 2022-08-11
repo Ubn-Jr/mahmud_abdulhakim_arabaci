@@ -42,19 +42,17 @@ func main() {
 			fmt.Println("Yanlış tercih yaptınız...")
 			goto FINISH
 		}
-	Loops:
-		var chc2 int
-		fmt.Println("1 : Ögrencilerin Vize Final Hesaplaması yapıp kalan ve geçenleri listelemek için \n2 : Ögrencileri Ad Soyad Listelemek için\n3 : Girilen İndeksdeki Ögrencinin Durumunu Yazdır\n4 : Girilen İndeksdeki Harici Ögrencileri listele\n5 : Sonlandırmak için")
-		// TODO Ad'a soyad'a göre Arama, Ad,Soyad, Vize, Final ve Ort Notlara göre sıralama(A-Z, Z-A), push to multi dim array
-		fmt.Scanln(&chc2)
-		if chc2 == 5 {
-			//TODO
-			//burada FINISH label i yerine break veya return yada os.Exit(-1) kullanılabilir
-			//goto ile label kullanımı yazılımlar için kullanışlı değildir
-			goto FINISH
-		}
-		listStd(chc2)
-		goto Loops
+		var chc2 int = 1
+		for chc2 < 7 && chc2 > 0 {
+
+			fmt.Println("1 : Ögrencilerin Vize Final Hesaplaması yapıp kalan ve geçenleri listelemek için \n2 : Ögrencileri Ad Soyad Listelemek için\n3 : Girilen İndeksdeki Ögrencinin Durumunu Yazdır\n4 : Girilen İndeksdeki Harici Ögrencileri listele\n5 : Geçen Ögrencileri Listelemek İçin\n6 : Kalan Ögrencileri Listelemek İçin\n7 : Sonlandırmak için")
+			// TODO ADD ARRAY SORTING BY NAME SURNAME AND STATUS, swap selected indexes
+			fmt.Scanln(&chc2)
+			listStd(chc2)
+		} // GOTO yerine For kullanıldı, Sadece Geçen ve Kalanları listeleme eklendi.
+
+		fmt.Println("Başka bir işlem kalmadığı için Program Sonlandırılıyor...")
+
 	} else {
 		fmt.Println("Değer yanlış girildiğinden dolayı program sonlanıyor....")
 	}
@@ -62,7 +60,7 @@ FINISH:
 }
 
 func listStd(chpc int) {
-	if chpc <= 0 || chpc > 5 {
+	if chpc <= 0 || chpc > 7 {
 		fmt.Println("Yanlış Giriş Yaptınız....")
 	} else {
 		if chpc == 1 {
@@ -109,6 +107,23 @@ func listStd(chpc int) {
 				drm := "Kaldı"
 				if stdDrm[i] {
 					drm = "Geçti"
+				}
+				fmt.Printf("%d. Ögrencinin Adı: %s, Soyadı : %s, Vize: %.1f, Final: %.1f Ortalama: %.1f Durumu: %s...\n", i+1, stdName[i], stdSurname[i], stdVize[i], stdFinal[i], stdOrt[i], drm)
+			}
+		}
+		if chpc == 5 || chpc == 6 {
+			if chpc == 5 {
+				fmt.Println("Geçen Ögrenciler Listeneliyor...")
+			} else {
+				fmt.Println("Kalan Ögrenciler Listeneliyor...")
+			}
+			for i := 0; i < len(stdName); i++ {
+				drm := "Kaldı"
+				if stdDrm[i] {
+					drm = "Geçti"
+				}
+				if (drm == "Kaldı" && chpc == 5) || (drm == "Geçti" && chpc == 6) {
+					continue
 				}
 				fmt.Printf("%d. Ögrencinin Adı: %s, Soyadı : %s, Vize: %.1f, Final: %.1f Ortalama: %.1f Durumu: %s...\n", i+1, stdName[i], stdSurname[i], stdVize[i], stdFinal[i], stdOrt[i], drm)
 			}
