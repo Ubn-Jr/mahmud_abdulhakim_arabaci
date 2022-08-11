@@ -48,6 +48,9 @@ func main() {
 		// TODO Ad'a soyad'a göre Arama, Ad,Soyad, Vize, Final ve Ort Notlara göre sıralama(A-Z, Z-A), push to multi dim array
 		fmt.Scanln(&chc2)
 		if chc2 == 5 {
+			//TODO
+			//burada FINISH label i yerine break veya return yada os.Exit(-1) kullanılabilir
+			//goto ile label kullanımı yazılımlar için kullanışlı değildir
 			goto FINISH
 		}
 		listStd(chc2)
