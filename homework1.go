@@ -18,11 +18,7 @@ func main() {
 }
 
 //TODO
-//golang için isimlerin büyük harfle başlamasının özel bir anlamı vardır bu konu işlenecektir ++
-//go dilinde en ideal kullanım biçimi camelCase yöntemidir ++
-//bunu araştırıp tüm fonksiyon ve değişken isimlerini camelCase olarak yeniden yazalım ++
-//proje dosyası isimlerinin sonuna .go ifadesini koyalım ++
-//BAŞARILI bir çalışma
+//err control
 
 func choiceAct(cha int) {
 	if cha < 1 || cha > 5 {
