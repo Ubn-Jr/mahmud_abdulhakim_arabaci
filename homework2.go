@@ -12,7 +12,7 @@ func main() {
 
 	fmt.Println("Final Notunuzu Giriniz")
 	fmt.Scanln(&Final)
-
+	// TODO err control
 	if Vize < 0 || Vize > 100 {
 		fmt.Printf("Vize Notunuz 100'den büyük yada 0'dan küçük olamaz... Girdiginiz değer %d\n", int(Vize))
 	} else if Final < 0 || Final > 100 {
