@@ -47,6 +47,7 @@ func main() {
 
 			fmt.Println("1 : Ögrencilerin Vize Final Hesaplaması yapıp kalan ve geçenleri listelemek için \n2 : Ögrencileri Ad Soyad Listelemek için\n3 : Girilen İndeksdeki Ögrencinin Durumunu Yazdır\n4 : Girilen İndeksdeki Harici Ögrencileri listele\n5 : Geçen Ögrencileri Listelemek İçin\n6 : Kalan Ögrencileri Listelemek İçin\n7 : Sonlandırmak için")
 			// TODO ADD ARRAY SORTING BY NAME SURNAME AND STATUS, swap selected indexes
+			// TODO err control with "err error" 
 			fmt.Scanln(&chc2)
 			listStd(chc2)
 		} // GOTO yerine For kullanıldı, Sadece Geçen ve Kalanları listeleme eklendi.
