@@ -49,6 +49,7 @@ func main() {
 			// TODO ADD ARRAY SORTING BY NAME SURNAME AND STATUS, swap selected indexes
 			// TODO err control with "err error" 
 			// TODO make better use of func
+			// TODO Use Slices
 			fmt.Scanln(&chc2)
 			listStd(chc2)
 		} // GOTO yerine For kullanıldı, Sadece Geçen ve Kalanları listeleme eklendi.
