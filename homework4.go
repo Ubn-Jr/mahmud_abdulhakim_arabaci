@@ -42,6 +42,9 @@ func loopcheck(chc string) bool {
 
 }
 
+//Prints given array by int value,
+//if given 0 prints from frist element to last
+//if given 1 prints from last to first element
 func arrPrinter(arr []string, reverse int) {
 	if len(arr) == 0 {
 		fmt.Println("Dizi Boş")
@@ -60,7 +63,8 @@ func arrPrinter(arr []string, reverse int) {
 
 }
 
-func insertFruitIntoArray(arr *[]string) []string {
+//Throw in a string array then array will have 5 fruits inserted into it
+func insertFruitIntoArray(arr *[]string) {
 	rnm := [5]string{
 		"Elma",
 		"Karpuz",
@@ -69,5 +73,4 @@ func insertFruitIntoArray(arr *[]string) []string {
 		"Kayısı"}
 
 	*arr = rnm[:]
-	return *arr
 }
