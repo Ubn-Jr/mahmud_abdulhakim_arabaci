@@ -74,3 +74,4 @@ func insertFruitIntoArray(arr *[]string) {
 
 	*arr = rnm[:]
 }
+//Todo delete add fruits
